@@ -86,7 +86,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* HeroComponent.css */
+.hero-background {
+  background-image: url('./path/to/your.gif');
+  height: 100vh;
+  /* Full viewport height */
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

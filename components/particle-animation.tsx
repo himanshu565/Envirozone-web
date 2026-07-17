@@ -4,7 +4,18 @@ import React, { useRef, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial } from '@react-three/drei'
 import * as THREE from 'three'
+// HeroComponent.jsx
 
+import './HeroComponent.css';
+
+const HeroComponent = () => {
+  return (
+    <div className="hero-background">
+    </div>
+  );
+};
+
+export default HeroComponent;
 interface ParticleSwarmProps {
   count?: number
 }
