@@ -28,7 +28,7 @@ export function Hero() {
           loop
           playsInline
           preload="metadata"
-          poster="/imges/envirozone-hero.png"
+          poster="/chimney_Smoke.mp4"
           aria-hidden="true"
         >
           <source src="/Video.mp4" type="video/mp4" />
