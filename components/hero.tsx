@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { Button } from './ui/button'
-
+import Link from 'next/link'
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
@@ -56,12 +56,15 @@ export function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <Button
-              size="lg"
-              className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 shadow-lg shadow-emerald-500/30"
-            >
-              Explore Services
-            </Button>
+            <Link href="/solutions">
+      <Button
+        size="lg"
+        className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 shadow-lg shadow-emerald-500/30"
+        // href removed from here
+      >
+        Explore Services
+      </Button>
+    </Link>  
             <Button
               size="lg"
               variant="outline"

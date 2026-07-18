@@ -226,7 +226,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 md:px-6 bg-gradient-to-r from-emerald-50 to-teal-50 border-y border-emerald-100">
+      <section className="py-20 px-4 md:px-6 bg-linear-to-r from-emerald-50 to-teal-50 border-y border-emerald-100">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="down" distance={50}>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
