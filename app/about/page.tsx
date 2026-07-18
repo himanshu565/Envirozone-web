@@ -57,12 +57,12 @@ export default function AboutPage() {
       </section>
 
       {/* Key Statistics */}
-      <section className="py-16 px-4 md:px-6 bg-gradient-to-r from-emerald-50 to-teal-50 border-y border-emerald-100">
+      <section className="py-16 px-4 md:px-6 bg-linear-to-r from-emerald-50 to-teal-50 border-y border-emerald-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
               { label: 'Years of Excellence', value: 30 },
-              { label: 'Projects Completed', value: 500 },
+              { label: 'Projects Completed', value: 500 },  
               { label: 'Enterprise Clients', value: 100 },
               { label: 'Global Locations', value: 45 }
             ].map((stat, i) => (
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
                     <CountUp to={stat.value} suffix="+" />
                   </div>
-                  <p className="text-slate-600 font-medium">{stat.label}</p>
+                  <p className="text-slate-900 font-medium">{stat.label}</p>
                 </div>
               </ScrollReveal>
             ))}

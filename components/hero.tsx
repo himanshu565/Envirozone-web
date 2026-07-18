@@ -18,28 +18,28 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-none">
       <div className="absolute inset-0">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/chimney_Smoke.mp4"
-          aria-hidden="true"
-        >
-          <source src="/Video.mp4" type="video/mp4" />
-          <img src="/imges/envirozone-hero.png" alt="Industrial background footage" className="h-full w-full object-cover" />
-        </video>
+  <video
+    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    
+  >
+    <source src="/Chimney_Smoke.mp4" type="video/mp4" />
+  </video>
 
-        <div className="absolute inset-0 bg-linear-to-b from-slate-950/75 via-slate-900/55 to-slate-950/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
-      </div>
+  {/* Dark Overlay */}
+  {/* <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-slate-950/75 via-slate-900/55 to-slate-950/80" /> */}
 
-      <div className="absolute inset-0 flex items-center justify-center">
+  {/* Green Glow Overlay */}
+  <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
+</div>
+
+      <div className=" inset-0 flex items-center justify-center relative z-10 text-center">
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="mb-6">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)]">

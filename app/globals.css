@@ -96,7 +96,8 @@
 .hero-background {
   background-clip: url('/public/Chimney_Smoke.mp4');
   height: 100vh;
-  width: 100vh;;
+  width: 100vh;
+ 
   /* Full viewport height */
   width: 100%;
   background-size: cover;

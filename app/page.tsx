@@ -93,7 +93,7 @@ export default function Home() {
                   <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
                     <CountUp to={stat.value} suffix={stat.suffix || ''} />
                   </div>
-                  <p className="text-slate-300 font-medium">{stat.label}</p>
+                  <p className="text-slate-600 font-medium">{stat.label}</p>
                 </div>
               </ScrollReveal>
             ))}
