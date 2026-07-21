@@ -29,10 +29,10 @@ const values = [
 ]
 
 const team = [
-  { name: 'Dr. Sarah Chen', role: 'Chief Executive Officer', bio: '30+ years in environmental engineering' },
-  { name: 'Michael Rodriguez', role: 'CTO', bio: 'AI & IoT specialist with 20+ years experience' },
-  { name: 'Jennifer Walsh', role: 'VP Operations', bio: 'Led 200+ environmental projects globally' },
-  { name: 'David Kumar', role: 'VP Sales', bio: '25 years building environmental solutions' }
+  { name: 'Taken Chhabra', role: 'Chief Executive Officer', bio: '30+ years in environmental engineering' },
+  { name: 'Yash Chhabra', role: 'CTO', bio: 'AI & IoT specialist with 20+ years experience' },
+  { name: 'Sonu Tandon', role: 'VP Operations', bio: 'Led 200+ environmental projects globally' },
+  { name: 'Tushar chhabra', role: 'VP Sales', bio: '25 years building environmental solutions' }
 ]
 
 export default function AboutPage() {
@@ -45,14 +45,15 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="down" distance={50}>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              About <span className="bg-linear-to-b from-emerald-500 to-teal-500 bg-clip-text text-transparent">Enviro Alignment</span>
+              About <span className="bg-linear-to-b from-emerald-500 to-teal-500 bg-clip-text text-transparent">Envirozone Instruments and equipments</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal direction="down" distance={50} delay={0.2}>
             <p className="text-lg text-slate-600 max-w-3xl">
-              For three decades, we&apos;ve been at the forefront of environmental innovation, helping organizations monitor, manage, and optimize their environmental impact while achieving regulatory compliance and operational excellence.
+              Envirozone Instruments and Equipments is a trusted provider of environmental monitoring and pollution control solutions. We specialize in CAAQMS, CEMS, water quality monitoring systems, flow meters, gas analyzers, and STP/ETP/WWTP services. Our commitment to quality, innovation, and compliance helps industries achieve sustainable and efficient environmental management.
             </p>
           </ScrollReveal>
+
         </div>
       </section>
 
@@ -61,10 +62,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { label: 'Years of Excellence', value: 30 },
-              { label: 'Projects Completed', value: 500 },  
-              { label: 'Enterprise Clients', value: 100 },
-              { label: 'Global Locations', value: 45 }
+              { label: 'Years of Excellence', value: 15 },
+              { label: 'Projects Completed', value: 100 },  
+              { label: 'Enterprise Clients', value: 50 },
+              { label: 'Global Locations', value: 10 }
             ].map((stat, i) => (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
                 <div>
@@ -88,16 +89,10 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Story</h2>
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>
-                    Enviro Alignment was founded with a simple mission: to make environmental monitoring and compliance accessible, reliable, and cost-effective for organizations of all sizes.
+                    Envirozone Instruments & Equipments was founded with a vision to provide reliable, innovative, and sustainable environmental solutions for industries across India. Recognizing the growing need for accurate environmental monitoring and pollution control, we set out to deliver high-quality instruments and engineering services that help organizations meet regulatory requirements while protecting the environment.
                   </p>
                   <p>
-                    What started as a small team of environmental engineers has grown into a global leader in environmental technology. We&apos;ve installed over 500 systems across 45 countries, serving industries from manufacturing to healthcare.
-                  </p>
-                  <p>
-                    Our commitment to innovation, combined with our deep industry expertise, has enabled us to solve some of the most challenging environmental problems facing organizations today.
-                  </p>
-                  <p>
-                    Today, we continue to push the boundaries of what&apos;s possible in environmental monitoring, leveraging AI, IoT, and cloud technology to deliver unprecedented insights and control.
+                    Over the years, we have expanded our expertise to include air quality monitoring, emission monitoring, water quality analysis, flow measurement, and complete STP, ETP, and WWTP solutions. Guided by our commitment to quality, customer satisfaction, and continuous innovation, we strive to build long-term partnerships and contribute to a cleaner, greener, and more sustainable future.
                   </p>
                 </div>
               </div>
