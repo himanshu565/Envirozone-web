@@ -106,10 +106,10 @@ export default function ContactPage() {
                     Phone
                   </h3>
                   <p className="text-slate-600">
-                    +91 XXXXX XXXXX
+                    +91 9811138349
                   </p>
                   <p className="text-slate-600">
-                    +91 XXXXX XXXXX
+                    +91 9811138359
                   </p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                   </h3>
 
                   <p className="text-slate-600 leading-7">
-                    Envirozone Instruments & Equipment Pvt. Ltd.
+                    Envirozone Instruments and Equipment Pvt. Ltd.
                     <br />
                     New Delhi,
                     <br />

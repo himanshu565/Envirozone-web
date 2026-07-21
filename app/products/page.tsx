@@ -9,8 +9,8 @@ import { Package, Gauge, Zap, Shield } from 'lucide-react'
 const products = [
   {
     id: 1,
-    name: 'AirPure Monitor Pro',
-    category: 'Air Quality',
+    name: 'OCEMS (Online Continuous Effluent Monitoring System) Probe Type ',
+    category: 'Water Quality Monitoring',
     description: 'Advanced air pollution monitoring system with real-time data streaming and predictive analytics.',
     specs: ['Real-time monitoring', 'Cloud integration', '24/7 support'],
     color: '#10b981',
@@ -23,8 +23,8 @@ const products = [
   },
   {
     id: 2,
-    name: 'AquaPure Treatment',
-    category: 'Water Treatment',
+    name: 'OCEMS (Online Continuous Effluent Monitoring System) Cabinet type',
+    category: 'Water Quality Monitoring',
     description: 'Comprehensive water treatment solution for industrial and municipal applications.',
     specs: ['Advanced filtration', 'Automated dosing', 'Energy efficient'],
     color: '#0891b2',
@@ -37,8 +37,8 @@ const products = [
   },
   {
     id: 3,
-    name: 'EcoWaste Processor',
-    category: 'Waste Management',
+    name: 'CEMS (Continuous Emission Monitoring System) ',
+    category: 'Emission Monitoring ',
     description: 'Intelligent waste processing system with sorting, compression, and environmental tracking.',
     specs: ['AI-powered sorting', 'Compression tech', 'Recycling tracking'],
     color: '#f59e0b',
@@ -51,7 +51,7 @@ const products = [
   },
   {
     id: 4,
-    name: 'EmissionGuard System',
+    name: 'Gas Analyzer',
     category: 'Emissions Testing',
     description: 'Comprehensive emissions monitoring and compliance system for regulatory requirements.',
     specs: ['Compliance certified', 'Multi-source tracking', 'Report generation'],
@@ -65,8 +65,8 @@ const products = [
   },
   {
     id: 5,
-    name: 'EcoFlow Analyzer',
-    category: 'Flow Analysis',
+    name: 'AAQMS (Ambient Air Quality Monitoring System)',
+    category: 'Air Quality Monitoring',
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
@@ -79,8 +79,50 @@ const products = [
   },
   {
     id: 6,
-    name: 'EnviroDash Cloud',
-    category: 'Software Platform',
+    name: 'Electromagnetic Flow Meter',
+    category: 'Electromagnetic',
+    description: 'Precision flow measurement and analysis for water and wastewater systems.',
+    specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
+    color: '#6366f1',
+    features: [
+      'Non-invasive measurement',
+      'Multi-parameter analysis',
+      'Historical trending',
+      'Predictive maintenance'
+    ]
+  },
+  {
+    id: 7,
+    name: ' Pm 2.5 Pm 10',
+    category: ' Air Quality Monitor',
+    description: 'Precision flow measurement and analysis for water and wastewater systems.',
+    specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
+    color: '#6366f1',
+    features: [
+      'Non-invasive measurement',
+      'Multi-parameter analysis',
+      'Historical trending',
+      'Predictive maintenance'
+    ]
+  },
+  {
+    id: 8,
+    name: ' Pan-Tilt-Zoom Camera (PTZ Camera)',
+    category: ' Air Quality Monitor',
+    description: 'Precision flow measurement and analysis for water and wastewater systems.',
+    specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
+    color: '#6366f1',
+    features: [
+      'Non-invasive measurement',
+      'Multi-parameter analysis',
+      'Historical trending',
+      'Predictive maintenance'
+    ]
+  },
+  {
+    id: 9,
+    name: 'Ground Water level - Piezometer',
+    category: 'Ground Water level',
     description: 'Unified cloud platform for managing all environmental monitoring and compliance data.',
     specs: ['Cloud-based', 'Real-time dashboards', 'API integration'],
     color: '#8b5cf6',
