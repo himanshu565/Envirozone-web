@@ -29,7 +29,7 @@ export function Hero() {
     preload="auto"
     
   >
-    <source src="/Chimney_Smoke.mp4" type="video/mp4" />
+    <source src="/Chimney_smoke2.mp4" type="video/mp4" />
   </video>
 
   {/* Dark Overlay */}
