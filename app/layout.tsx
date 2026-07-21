@@ -1,5 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import WhatsAppButton from "@/components/WhatsAppButton";
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="antialiased bg-[#fbf7ef] text-slate-900">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        <WhatsAppButton />
       </body>
     </html>
   )

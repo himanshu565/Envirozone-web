@@ -38,19 +38,19 @@ export function Contact() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-        <div className="p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
+        <div className="p-8 rounded-lg bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
           <Mail className="w-8 h-8 text-emerald-400 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
           <p className="text-slate-300">contact@enviroalignment.com</p>
         </div>
 
-        <div className="p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
+        <div className="p-8 rounded-lg bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
           <Phone className="w-8 h-8 text-emerald-400 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
           <p className="text-slate-300">+1 (555) 123-4567</p>
         </div>
 
-        <div className="p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
+        <div className="p-8 rounded-lg bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/20">
           <MapPin className="w-8 h-8 text-emerald-400 mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
           <p className="text-slate-300">123 Green Street, Eco City, EC 12345</p>
@@ -58,7 +58,7 @@ export function Contact() {
       </div>
 
       <div className="max-w-2xl mx-auto">
-        <div className="p-8 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/30">
+        <div className="p-8 rounded-lg bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-emerald-500/30">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

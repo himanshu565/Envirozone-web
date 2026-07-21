@@ -1,5 +1,6 @@
-// app/contact/page.tsx
+"use client";
 
+import { useState } from "react";
 import {
   Mail,
   Phone,
@@ -11,8 +12,57 @@ import {
 } from "lucide-react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    inquiry: "",
+    message: "",
+  });
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to send message");
+      }
+
+      alert("Your message has been sent successfully!");
+
+      // Clear the form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        inquiry: "",
+        message: "",
+      });
+
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <main className="bg-white">
+      {/* Keep the rest of your existing JSX exactly as it is */}
       {/* Hero */}
       <section className="relative overflow-hidden bg-linear-to-br from-emerald-900 via-teal-800 to-slate-900 py-24">
         <div className="absolute inset-0 opacity-10">
@@ -156,61 +206,105 @@ export default function ContactPage() {
               </h2>
             </div>
 
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
 
               <div className="grid gap-6 md:grid-cols-2">
-
                 <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="rounded-xl border p-4 outline-none focus:border-emerald-500"
-                />
+  type="text"
+  placeholder="Full Name"
+  value={formData.name}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      name: e.target.value,
+    })
+  }
+  className="rounded-xl border p-4 outline-none focus:border-emerald-500"
+/>
 
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="rounded-xl border p-4 outline-none focus:border-emerald-500"
-                />
+
+
+
+<input
+  type="email"
+  placeholder="Email Address"
+  value={formData.email}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      email: e.target.value,
+    })
+  }
+  className="rounded-xl border p-4 outline-none focus:border-emerald-500"
+/>
 
               </div>
+<input
+  type="text"
+  placeholder="Company Name"
+  value={formData.company}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      company: e.target.value,
+    })
+  }
+  className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
+/>
 
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
-              />
+             <input
+  type="tel"
+  placeholder="Phone Number"
+  value={formData.phone}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      phone: e.target.value,
+    })
+  }
+  className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
+/>
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
-              />
-
-              <select
-                className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
-              >
-                <option>Select Inquiry Type</option>
-                <option>CEMS</option>
-                <option>CEQMS</option>
-                <option>Data Logger</option>
-                <option>CPCB Connectivity</option>
-                <option>Calibration</option>
-                <option>AMC</option>
-                <option>Other</option>
-              </select>
+<select
+  value={formData.inquiry}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      inquiry: e.target.value,
+    })
+  }
+  className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
+>
+  <option value="">Select Inquiry Type</option>
+  <option value="CEMS">CEMS</option>
+  <option value="CEQMS">CEQMS</option>
+  <option value="Data Logger">Data Logger</option>
+  <option value="CPCB Connectivity">CPCB Connectivity</option>
+  <option value="Calibration">Calibration</option>
+  <option value="AMC">AMC</option>
+  <option value="Other">Other</option>
+</select>
 
               <textarea
-                rows={6}
-                placeholder="Tell us about your requirement..."
-                className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
-              />
+  rows={6}
+  placeholder="Tell us about your requirement..."
+  value={formData.message}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      message: e.target.value,
+    })
+  }
+  className="w-full rounded-xl border p-4 outline-none focus:border-emerald-500"
+/>
 
-              <button
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700"
-              >
-                Send Message
-                <Send size={18} />
-              </button>
+<button
+  type="submit"
+  className="flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-8 py-4 font-semibold text-white transition hover:bg-emerald-700"
+>
+  Send Message
+  <Send size={18} />
+</button>
 
             </form>
 
