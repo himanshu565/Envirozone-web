@@ -321,14 +321,12 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-3xl shadow-xl">
 
             <iframe
-              title="Google Map"
-              src="https://www.google.com/maps/embed?pb="
-              width="100%"
+            title="Google Map" 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d218.69534174004855!2d77.15632322069816!3d28.715796156166466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1784741904023!5m2!1sen!2sus"  width="100%"
               height="500"
               loading="lazy"
               allowFullScreen
-              className="border-0"
-            />
+              className="border-0"></iframe>
 
           </div>
         </div>
