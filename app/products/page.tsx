@@ -15,7 +15,7 @@ const products = [
     description: 'Advanced air pollution monitoring system with real-time data streaming and predictive analytics.',
     specs: ['Real-time monitoring', 'Cloud integration', '24/7 support'],
     color: '#ffffff',
-    image: 'Water analyser Probe Type.png',
+    image: 'Piezo meter (1).png',
     features: [
       'Real-time PM2.5/PM10 tracking',
       'Multi-parameter analysis',
@@ -30,7 +30,7 @@ const products = [
     description: 'Comprehensive water treatment solution for industrial and municipal applications.',
     specs: ['Advanced filtration', 'Automated dosing', 'Energy efficient'],
     color: '#0891b2',
-    image: 'Water analyser cabinet .png',
+    image: 'Water Analyser Cabinet.png',
     features: [
       'Multi-stage filtration',
       'Chemical-free options',
@@ -60,7 +60,7 @@ const products = [
     description: 'Comprehensive emissions monitoring and compliance system for regulatory requirements.',
     specs: ['Compliance certified', 'Multi-source tracking', 'Report generation'],
     color: '#ef4444',
-    image: 'Analyser.png',
+    image: 'Gas Analyser.png',
     features: [
       'Stack emissions monitoring',
       'Compliance reporting',
@@ -75,7 +75,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
-    image: 'Ambient .png',
+    image: 'Air.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -90,7 +90,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
-    image: 'Flow meter.png',
+    image: 'Flow.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -105,7 +105,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
-    image: 'Pm 2.5.png',
+    image: 'Pm .png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -120,7 +120,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
-    image: 'Light Sensor.png',
+    image: 'camera .png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -135,7 +135,7 @@ const products = [
     description: 'Unified cloud platform for managing all environmental monitoring and compliance data.',
     specs: ['Cloud-based', 'Real-time dashboards', 'API integration'],
     color: '#8b5cf6',
-    image: 'Piezo meter.png',
+    image: 'Ground level .png',
     features: [
       'Centralized monitoring',
       'Custom dashboards',
@@ -181,7 +181,7 @@ export default function ProductsPage() {
                           src={`/product-images/${product.image}`}
                           alt={product.name}
                           fill
-                          className="object-fit absolute insert-0"
+                          className="object-cover"
                         />
                       ) : (
                         <div className="absolute inset-0 opacity-50">
