@@ -175,7 +175,7 @@ export default function ProductsPage() {
                 <HoverScale scale={1.03}>
                   <div className="group bg-white rounded-xl overflow-hidden border border-emerald-100 hover:border-primary/40 transition-all duration-300 shadow-sm">
                     {/* 3D Viewer */}
-                    <div className="h-48 bg-linear-to-br from-emerald-50 to-teal-50 relative overflow-hidden">
+                    <div className="h-48 bg-linear-to-br from-emerald-50 to-teal-50 relative overflow-hidden bg-none">
                       {product.image ? (
                         <Image
                           src={`/product-images/${product.image}`}
