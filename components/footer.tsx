@@ -12,11 +12,11 @@ export function Footer() {
               <Image
                 src="/icon.jpg"
                 alt="Logo"
-                width={36}
-                height={36}
+                width={90}
+                height={90}
                 className="object-contain"
               />
-              <span className="text-lg font-bold text-slate-900">Envirozone</span>
+              <span className="text-lg font-bold text-slate-900">Envirozone Instruments and Equipments</span>
             </div>
             <p className="text-slate-600 text-sm">
               Reliable instruments. Sustainable future. Better tomorrow.
@@ -29,7 +29,7 @@ export function Footer() {
               <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Air Pollution Control</a></li>
               <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Water Treatment</a></li>
               <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Waste Management</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Monitoring Systems</a></li>
+              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">solid water management</a></li>
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-2 text-slate-600 text-sm">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 9811138359</span>
               </div>
               <div className="flex gap-3 mt-4">
                 <a href="#" className="text-slate-500 hover:text-primary transition-colors">

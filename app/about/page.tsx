@@ -30,9 +30,9 @@ const values = [
 
 const team = [
   { name: 'Taken Chhabra', role: 'Chief Executive Officer', bio: '30+ years in environmental engineering' },
-  { name: 'Yash Chhabra', role: 'CTO', bio: 'AI & IoT specialist with 20+ years experience' },
-  { name: 'Sonu Tandon', role: 'VP Operations', bio: 'Led 200+ environmental projects globally' },
-  { name: 'Tushar chhabra', role: 'VP Sales', bio: '25 years building environmental solutions' }
+  { name: 'Yash Chhabra', role: 'Partner', bio: 'AI & IoT specialist with 20+ years experience' },
+  { name: 'Sonu Tandon', role: 'Vice president', bio: 'Led 200+ environmental projects globally' },
+  { name: 'Tushar chhabra', role: 'partner', bio: '25 years building environmental solutions' }
 ]
 
 export default function AboutPage() {

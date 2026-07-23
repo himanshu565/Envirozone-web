@@ -30,12 +30,12 @@ export function Navbar() {
               <Image
                 src="/icon.jpg"
                 alt="Logo"
-                width={34}
-                height={34}
+                width={500}
+                height={500}
                 className="object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-slate-900">Envirozone</span>
+            <span className="text-xl font-bold text-slate-900">Envirozone Instruments and Equipments</span>
           </Link>
 
           {/* Desktop Menu */}
