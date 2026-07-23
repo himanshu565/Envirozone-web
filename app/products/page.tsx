@@ -5,6 +5,7 @@ import { HoverScale } from '@/components/animations/hover-scale'
 import { Stagger } from '@/components/animations/stagger'
 import { Product3DViewer } from '@/components/animations/product-3d-viewer'
 import { Package, Gauge, Zap, Shield } from 'lucide-react'
+import Image from 'next/image'
 
 const products = [
   {
@@ -13,7 +14,8 @@ const products = [
     category: 'Water Quality Monitoring',
     description: 'Advanced air pollution monitoring system with real-time data streaming and predictive analytics.',
     specs: ['Real-time monitoring', 'Cloud integration', '24/7 support'],
-    color: '#10b981',
+    color: '#ffffff',
+    image: 'Water analyser Probe Type.png',
     features: [
       'Real-time PM2.5/PM10 tracking',
       'Multi-parameter analysis',
@@ -28,6 +30,7 @@ const products = [
     description: 'Comprehensive water treatment solution for industrial and municipal applications.',
     specs: ['Advanced filtration', 'Automated dosing', 'Energy efficient'],
     color: '#0891b2',
+    image: 'Water analyser cabinet .png',
     features: [
       'Multi-stage filtration',
       'Chemical-free options',
@@ -42,6 +45,7 @@ const products = [
     description: 'Intelligent waste processing system with sorting, compression, and environmental tracking.',
     specs: ['AI-powered sorting', 'Compression tech', 'Recycling tracking'],
     color: '#f59e0b',
+    image: 'SPM analyser.png',
     features: [
       'Automated sorting',
       'Compression efficiency',
@@ -56,6 +60,7 @@ const products = [
     description: 'Comprehensive emissions monitoring and compliance system for regulatory requirements.',
     specs: ['Compliance certified', 'Multi-source tracking', 'Report generation'],
     color: '#ef4444',
+    image: 'Analyser.png',
     features: [
       'Stack emissions monitoring',
       'Compliance reporting',
@@ -70,6 +75,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
+    image: 'Ambient .png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -84,6 +90,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
+    image: 'Flow meter.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -98,6 +105,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
+    image: 'Pm 2.5.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -112,6 +120,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
+    image: 'Analyser.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',
@@ -126,6 +135,7 @@ const products = [
     description: 'Unified cloud platform for managing all environmental monitoring and compliance data.',
     specs: ['Cloud-based', 'Real-time dashboards', 'API integration'],
     color: '#8b5cf6',
+    image: 'Piezo meter.png',
     features: [
       'Centralized monitoring',
       'Custom dashboards',
@@ -166,9 +176,18 @@ export default function ProductsPage() {
                   <div className="group bg-white rounded-xl overflow-hidden border border-emerald-100 hover:border-primary/40 transition-all duration-300 shadow-sm">
                     {/* 3D Viewer */}
                     <div className="h-48 bg-linear-to-br from-emerald-50 to-teal-50 relative overflow-hidden">
-                      <div className="absolute inset-0 opacity-50">
-                        <Product3DViewer color={product.color} scale={1.5} />
-                      </div>
+                      {product.image ? (
+                        <Image
+                          src={`/product-images/${product.image}`}
+                          alt={product.name}
+                          fill
+                          className="object-fit absolute insert-0"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 opacity-50">
+                          <Product3DViewer color={product.color} scale={1.5} />
+                        </div>
+                      )}
                       <div className="absolute inset-0 bg-linear-to-b from-white/30 to-transparent" />
                     </div>
 

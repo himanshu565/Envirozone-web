@@ -43,7 +43,7 @@ export function Hero() {
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="mb-6">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)]">
-              30 Years of Environmental
+              12+ Years of Environmental
               <span className="block bg-linear-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
                 Excellence
               </span>
@@ -75,7 +75,7 @@ export function Hero() {
           </div>
 
           <p className="text-slate-300/90 mt-12 text-sm">
-            Trusted by leading organizations worldwide
+            Delivering Smart Monitoring • Pollution Control • Sustainable Solutions for a Better Tomorrow.
           </p>
         </div>
       </div>

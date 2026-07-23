@@ -20,29 +20,29 @@ export const metadata = {
 const features = [
   {
     icon: Zap,
-    title: 'Real-Time Monitoring',
-    description: 'Live data streams from all monitoring points with instant alerts'
+    title: '12+ Years of Experience',
+    description: 'Delivering reliable environmental monitoring, water & wastewater treatment, and pollution control solutions with proven expertise.'
   },
   {
     icon: Shield,
-    title: '100% Compliant',
-    description: 'Meet all regulatory requirements and environmental standards'
+    title: 'CPCB & SPCB Compliance',
+    description: 'Helping industries achieve seamless regulatory compliance through advanced monitoring systems and expert support.'
   },
   {
     icon: Gauge,
-    title: 'Precision Control',
-    description: 'Fine-tuned systems deliver exact performance specifications'
+    title: 'End-to-End Solutions',
+    description: 'From consultation and system design to installation, commissioning, calibration, AMC, and after-sales service.'
   },
   {
     icon: Leaf,
-    title: 'Eco-Friendly',
-    description: 'Sustainable solutions that protect the environment'
+    title: 'PAN India upport',
+    description: 'A dedicated team of engineers providing prompt technical assistance and nationwide service coverage.'
   }
 ]
 
 const stats = [
-  { label: 'Years Experience', value: 30 },
-  { label: 'Projects Completed', value: 500, suffix: '+' },
+  { label: 'Years Experience', value: 12 },
+  { label: 'Projects Completed', value: 50, suffix: '+' },
   { label: 'Enterprise Clients', value: 100, suffix: '+' },
   { label: 'Satisfaction Rate', value: 98, suffix: '%' }
 ]
@@ -61,7 +61,7 @@ export default function Home() {
               Why <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Choose Us</span>
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-              Industry-leading technology and 30 years of expertise
+              Industry-leading technology and 12 years of expertise
             </p>
           </ScrollReveal>
 
