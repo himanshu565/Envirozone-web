@@ -109,27 +109,27 @@ export default function Home() {
               Our <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-              Comprehensive environmental solutions for every need
+              Complete Environmental Monitoring & Pollution Control Solutions
             </p>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                title: 'Air Pollution Control',
-                description: 'Advanced monitoring and mitigation of atmospheric pollutants',
+                title: 'Environmental Monitoring Systems',
+                description: 'Advanced CEMS, OCEMS, AAQMS, Stack Monitoring, Water Quality Monitoring Systems, sensors, calibration, and CPCB/SPCB data integration.',
                 color: 'from-emerald-500/10 to-emerald-700/10',
                 borderColor: 'border-emerald-500/50'
               },
               {
-                title: 'Water Treatment',
-                description: 'Complete water purification and quality management systems',
+                title: 'Wastewater Management',
+                description: 'Complete ETP, STP, WTP, Water Recycling & Reuse Systems, online analyzers, flow meters, and process automation for efficient water management.',
                 color: 'from-cyan-500/10 to-blue-700/10',
                 borderColor: 'border-cyan-500/50'
               },
               {
-                title: 'Waste Management',
-                description: 'Intelligent waste processing with AI-powered optimization',
+                title: 'Solid Waste Management',
+                description: 'Comprehensive solid waste management solutions including waste segregation, collection, processing, recycling, composting, and scientific disposal for sustainable environmental compliance.',
                 color: 'from-amber-500/10 to-orange-700/10',
                 borderColor: 'border-amber-500/50'
               }

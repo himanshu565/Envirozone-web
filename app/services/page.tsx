@@ -9,54 +9,53 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 const services = [
   {
     id: 'air-pollution',
-    title: 'Air Pollution Control',
-    subtitle: 'Advanced atmospheric monitoring and pollution mitigation',
-    description: 'Comprehensive air quality monitoring solutions for industrial, municipal, and residential applications. Our systems track particulate matter, gases, and emission sources in real-time.',
+    title: 'Environmental Monitoring Systems',
+    subtitle: 'Real-Time Environmental Monitoring for Regulatory Compliance',
+    description: 'Comprehensive monitoring solutions with accurate data acquisition, remote access, and seamless integration with CPCB/SPCB servers.',
     image: 'bg-linear-to-b from-emerald-500/10 to-emerald-700/10',
     color: 'from-emerald-400 to-teal-400',
     benefits: [
-      'Real-time PM2.5 & PM10 monitoring',
-      'Multi-pollutant analysis (NO2, SO2, O3, CO)',
-      'Predictive air quality forecasting',
-      'Regulatory compliance reporting',
-      'Mobile app alerts and notifications',
-      'Cloud-based data management'
+      'Continuous Emission Monitoring System (CEMS)',
+      'Online Effluent Monitoring System (OCEMS)',
+      'Ambient Air Quality Monitoring System (AAQMS)',
+      'Stack Emission Monitoring',
+      'Calibration & AMC Services',
+      'Data Logger & Cloud Monitoring'
     ],
-    stats: { projects: 150, locations: 500, satisfaction: 98 }
+    stats: { projects: 50, locations: 10, satisfaction: 98 }
   },
   {
     id: 'water-treatment',
-    title: 'Water Treatment Systems',
-    subtitle: 'Complete water purification and quality management',
-    description: 'Advanced water treatment systems designed for municipal, industrial, and agricultural water needs. From basic filtration to advanced chemical treatment.',
+    title: 'Waste water Management',
+    subtitle: 'Complete Wastewater Treatment & Water Reuse Solutions',
+    description: 'We deliver end-to-end wastewater management solutions for industrial, commercial, and municipal sectors. Our systems are designed to improve water quality, maximize reuse, reduce operational costs, and ensure compliance with CPCB/SPCB environmental standards.',
     image: 'bg-linear-to-b from-cyan-500/10 to-blue-700/10',
     color: 'from-cyan-400 to-blue-400',
     benefits: [
-      'Multi-stage filtration systems',
-      'Advanced oxidation processes',
-      'Membrane filtration technology',
-      'Automated chemical dosing',
-      'pH and turbidity control',
-      'Microorganism elimination'
+      'ETP, STP & WTP Solutions',
+      'Operation & Maintenance (O&M) Services',
+      'Upgradation & Modernization of Existing STP/ETP Plants',
+      'Online Water Quality Monitoring',
+      'Operation & Maintenance Support',
+      'Design, Installation, Commissioning & AMC Services'
     ],
-    stats: { projects: 200, locations: 800, satisfaction: 99 }
+    stats: { projects: 50, locations: 800, satisfaction: 99 }
   },
   {
     id: 'waste-management',
-    title: 'Waste Management Solutions',
-    subtitle: 'Smart waste processing and environmental sustainability',
-    description: 'Intelligent waste management systems with AI-powered sorting, recycling optimization, and environmental impact tracking.',
+    title: 'Solid Waste Management Solutions',
+    subtitle: 'Sustainable Waste Management for a Cleaner Tomorrow',
+    description: 'We provide integrated solid waste management solutions for municipalities, industries, commercial establishments, and institutions. Our services focus on efficient waste collection, segregation, processing, recycling, and scientific disposal to maximize resource recovery and ensure environmental compliance.',
     image: 'bg-linear-to-b from-amber-500/10 to-orange-700/10',
     color: 'from-amber-400 to-orange-400',
     benefits: [
-      'Automated waste sorting',
-      'Compression and compacting',
-      'Recycling rate optimization',
-      'Landfill diversion tracking',
-      'Environmental impact reporting',
-      'Cost reduction analytics'
+      'Municipal Solid Waste (MSW) Management',
+      'Industrial & Commercial Waste Management',
+      'Industrial Shredders & Waste Processing Equipment',
+      'Environmental Compliance & Sustainable Waste Solutions',
+      'Organic Waste Composters (OWC)',
     ],
-    stats: { projects: 120, locations: 300, satisfaction: 97 }
+    stats: { projects: 30, locations: 50, satisfaction: 97 }
   }
 ]
 

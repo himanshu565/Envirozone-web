@@ -10,7 +10,7 @@ import Image from 'next/image'
 const products = [
   {
     id: 1,
-    name: 'OCEMS (Online Continuous Effluent Monitoring System) Probe Type ',
+    name: 'OCEMS (Online Continuous Effluent Monitoring System) Probe Type  ',
     category: 'Water Quality Monitoring',
     description: 'Advanced air pollution monitoring system with real-time data streaming and predictive analytics.',
     specs: ['Real-time monitoring', 'Cloud integration', '24/7 support'],
@@ -120,7 +120,7 @@ const products = [
     description: 'Precision flow measurement and analysis for water and wastewater systems.',
     specs: ['High accuracy', 'Ultrasonic tech', 'Data logging'],
     color: '#6366f1',
-    image: 'Analyser.png',
+    image: 'Light Sensor.png',
     features: [
       'Non-invasive measurement',
       'Multi-parameter analysis',

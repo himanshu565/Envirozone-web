@@ -100,7 +100,7 @@ export default function AboutPage() {
             <ScrollReveal direction="right" distance={50}>
               <div className="bg-linear-to-br from-emerald-50 to-teal-50 rounded-xl p-8 border border-emerald-100 h-96 flex items-center justify-center shadow-sm">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-emerald-400 mb-4">30</div>
+                  <div className="text-6xl font-bold text-emerald-400 mb-4">12</div>
                   <p className="text-xl text-slate-600">Years of Environmental Excellence</p>
                 </div>
               </div>
