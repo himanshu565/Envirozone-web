@@ -182,6 +182,7 @@ export default function ProductsPage() {
                           alt={product.name}
                           fill
                           className="object-cover"
+                          loading="eager"
                         />
                       ) : (
                         <div className="absolute inset-0 opacity-50">
@@ -209,7 +210,7 @@ export default function ProductsPage() {
                         ))}
                       </div>
 
-                      <button className="w-full px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary font-semibold hover:bg-primary/15 transition-colors">
+                      <button className="w-full px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary font-semibold hover:bg-primary/15 transition-colors"> 
                         View Details
                       </button>
                     </div>
