@@ -191,25 +191,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal direction="right" distance={50}>
-              <HoverScale scale={1.02}>
-                <div className="bg-linear-to-br from-emerald-500/10 to-teal-500/10 rounded-xl p-8 border border-emerald-500/30">
-                  <div className="grid grid-cols-2 gap-6">
-                    {[
-                      { value: '500+', label: 'Projects' },
-                      { value: '45', label: 'Countries' },
-                      { value: '2M+', label: 'People Served' },
-                      { value: '125M', label: 'Savings Generated' }
-                    ].map((metric, i) => (
-                      <div key={i} className="text-center">
-                        <div className="text-3xl font-bold text-emerald-400 mb-2">{metric.value}</div>
-                        <p className="text-sm text-slate-300">{metric.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </HoverScale>
-            </ScrollReveal>
+           
           </div>
         </div>
       </section>
