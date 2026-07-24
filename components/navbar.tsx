@@ -1,32 +1,35 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import Image from 'next/image'
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/products', label: 'Products' },
-    { href: '/services', label: 'Services' },
-    { href: '/solutions', label: 'Solutions' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/about', label: 'About' },
-  ]
+    { href: "/", label: "Home" },
+    { href: "/products", label: "Products" },
+    { href: "/services", label: "Services" },
+    { href: "/solutions", label: "Solutions" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/about", label: "About" },
+  ];
 
-  const isActive = (href: string) => pathname === href
+  const isActive = (href: string) => pathname === href;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-emerald-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-22  h-22   flex items-center justify-center">
+          <Link
+            href="/"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <div className="w-10  h-10   flex items-center justify-center">
               <Image
                 src="/icon.jpg"
                 alt="Logo"
@@ -36,14 +39,10 @@ export function Navbar() {
               />
             </div>
             <h1 className="font-['Poppins'] leading-none">
-  <span className="block text-2xl md:text-3xl font-extrabold text-[#8BC34A]">
-    Envirozone Instruments
-  </span>
-
-  <span className="block mt-2 text-3xl md:text-2xl font-semibold text-black">
-    And Equipments
-  </span>
-</h1>
+              <span className="text-xl font-bold text-slate-900">
+                Envirozone Instruments and Equipments
+              </span>
+            </h1>
           </Link>
 
           {/* Desktop Menu */}
@@ -52,15 +51,19 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition-colors font-medium ${isActive(link.href)
-                  ? 'text-primary'
-                  : 'text-slate-700 hover:text-primary'
-                  }`}
+                className={`transition-colors font-medium ${
+                  isActive(link.href)
+                    ? "text-primary"
+                    : "text-slate-700 hover:text-primary"
+                }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="px-6 py-2 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-colors">
+            <Link
+              href="/contact"
+              className="px-6 py-2 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-colors"
+            >
               Get Quote
             </Link>
           </div>
@@ -81,21 +84,25 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`block transition-colors font-medium py-2 ${isActive(link.href)
-                  ? 'text-primary'
-                  : 'text-slate-700 hover:text-primary'
-                  }`}
+                className={`block transition-colors font-medium py-2 ${
+                  isActive(link.href)
+                    ? "text-primary"
+                    : "text-slate-700 hover:text-primary"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="block w-full text-center px-6 py-2 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-colors">
+            <Link
+              href="/contact"
+              className="block w-full text-center px-6 py-2 rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-colors"
+            >
               Get Quote
             </Link>
           </div>
         )}
       </div>
     </nav>
-  )
+  );
 }

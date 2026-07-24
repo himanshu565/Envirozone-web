@@ -1,42 +1,120 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from "react";
 import { Button } from './ui/button'
 import Link from 'next/link'
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
+  const [activeVideo, setActiveVideo] = useState(1);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)')
-    if (mq && mq.matches && videoRef.current) {
-      try {
-        videoRef.current.pause()
-        videoRef.current.removeAttribute('autoplay')
-      } catch (e) {}
+ useEffect(() => {
+  const v1 = video1Ref.current;
+  const v2 = video2Ref.current;
+
+  if (!v1 || !v2) return;
+
+  // Respect reduced motion
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (mq.matches) {
+    v1.pause();
+    v2.pause();
+    return;
+  }
+
+  v1.play();
+
+  const transitionDuration = 1000; // ms
+
+  const checkTransition = () => {
+    if (
+      activeVideo === 1 &&
+      v1.duration &&
+      v1.currentTime >= v1.duration - transitionDuration / 1000
+    ) {
+      if (v2.paused) {
+        v2.currentTime = 0;
+        v2.play();
+        setActiveVideo(2);
+      }
     }
-  }, [])
+
+    if (
+      activeVideo === 2 &&
+      v2.duration &&
+      v2.currentTime >= v2.duration - transitionDuration / 1000
+    ) {
+      if (v1.paused) {
+        v1.currentTime = 0;
+        v1.play();
+        setActiveVideo(1);
+      }
+    }
+  };
+
+  const reset1 = () => {
+    v1.pause();
+    v1.currentTime = 0;
+  };
+
+  const reset2 = () => {
+    v2.pause();
+    v2.currentTime = 0;
+  };
+
+  v1.addEventListener("timeupdate", checkTransition);
+  v2.addEventListener("timeupdate", checkTransition);
+
+  v1.addEventListener("ended", reset1);
+  v2.addEventListener("ended", reset2);
+
+  return () => {
+    v1.removeEventListener("timeupdate", checkTransition);
+    v2.removeEventListener("timeupdate", checkTransition);
+    v1.removeEventListener("ended", reset1);
+    v2.removeEventListener("ended", reset2);
+  };
+}, [activeVideo]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-none">
       <div className="absolute inset-0">
+<div className="absolute inset-0">
+
+  {/* Video 1 */}
   <video
-    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    ref={video1Ref}
+    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+      activeVideo === 1 ? "opacity-100" : "opacity-0"
+    }`}
     autoPlay
     muted
-    loop
     playsInline
     preload="auto"
-    
   >
     <source src="/Chimney_smoke2.mp4" type="video/mp4" />
   </video>
 
-  {/* Dark Overlay */}
-  {/* <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-slate-950/75 via-slate-900/55 to-slate-950/80" /> */}
+  {/* Video 2 */}
+  <video
+    ref={video2Ref}
+    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+      activeVideo === 2 ? "opacity-100" : "opacity-0"
+    }`}
+    muted
+    playsInline
+    preload="auto"
+  >
+    <source src="/Factory.mp4" type="video/mp4" />
+  </video>
+
+  <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
+</div>
+
+ 
 
   {/* Green Glow Overlay */}
-  <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
+  {/* <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" /> */}
 </div>
 
       <div className=" inset-0 flex items-center justify-center relative z-10 text-center">
