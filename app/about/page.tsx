@@ -4,6 +4,7 @@ import { ScrollReveal } from '@/components/animations/scroll-reveal'
 import { HoverScale } from '@/components/animations/hover-scale'
 import { CountUp } from '@/components/animations/count-up'
 import { Users, Zap, Globe, Award } from 'lucide-react'
+import Link from "next/link";
 
 const values = [
   {
@@ -204,12 +205,15 @@ export default function AboutPage() {
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" distance={30} delay={0.3} className="flex gap-4 justify-center">
-            <button className="px-8 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition-colors">
-              Explore Solutions
-            </button>
-            <button className="px-8 py-3 rounded-lg border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 font-bold transition-colors">
+            <Link
+  href="/solutions"
+  className="inline-block px-8 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-bold transition-colors"
+>
+  Explore Solutions
+</Link>
+            {/* <button className="px-8 py-3 rounded-lg border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 font-bold transition-colors">
               Join Our Team
-            </button>
+            </button> */}
           </ScrollReveal>
         </div>
       </section>

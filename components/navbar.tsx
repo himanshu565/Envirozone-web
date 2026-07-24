@@ -30,9 +30,9 @@ export function Navbar() {
               <Image
                 src="/icon.jpg"
                 alt="Logo"
-                width={500}
-                height={500}
-                className="object-contain"
+                width={50}
+                height={50}
+                className="object-fill"
               />
             </div>
             <span className="text-xl font-bold text-slate-900">Envirozone Instruments and Equipments</span>

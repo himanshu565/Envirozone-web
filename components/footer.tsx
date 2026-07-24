@@ -26,20 +26,20 @@ export function Footer() {
           <div>
             <h4 className="text-slate-900 font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Air Pollution Control</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Water Treatment</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Waste Management</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">solid water management</a></li>
+              <li><a href="/services" className="text-slate-600 hover:text-primary transition-colors text-sm">Air Pollution Control</a></li>
+              <li><a href="/services" className="text-slate-600 hover:text-primary transition-colors text-sm">Water Treatment</a></li>
+              <li><a href="/services" className="text-slate-600 hover:text-primary transition-colors text-sm">Waste Management</a></li>
+              <li><a href="/services" className="text-slate-600 hover:text-primary transition-colors text-sm">Solid Waste Management</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-slate-900 font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">About Us</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Our Team</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Projects</a></li>
-              <li><a href="#" className="text-slate-600 hover:text-primary transition-colors text-sm">Careers</a></li>
+              <li><a href="/about" className="text-slate-600 hover:text-primary transition-colors text-sm">About Us</a></li>
+              <li><a href="/team" className="text-slate-600 hover:text-primary transition-colors text-sm">Our Team</a></li>
+              <li><a href="/portfolio" className="text-slate-600 hover:text-primary transition-colors text-sm">Projects</a></li>
+           
             </ul>
           </div>
 
@@ -62,14 +62,14 @@ export function Footer() {
                 <Phone size={16} />
                 <span>+91 9811138359</span>
               </div>
-              <div className="flex gap-3 mt-4">
+              {/* <div className="flex gap-3 mt-4">
                 <a href="#" className="text-slate-500 hover:text-primary transition-colors">
                   <Share2 size={18} />
                 </a>
                 <a href="#" className="text-slate-500 hover:text-primary transition-colors">
                   <TwitterIcon size={18} />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
