@@ -56,22 +56,24 @@ export function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/solutions">
-      <Button
-        size="lg"
-        className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 shadow-lg shadow-emerald-500/30"
-        // href removed from here
-      >
-        Explore Services
-      </Button>
-    </Link>  
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 bg-white/10 text-white hover:bg-white/20 font-semibold px-8 backdrop-blur-sm"
-            >
-              Get in Touch
-            </Button>
+  <Link href="/services">
+    <Button
+      size="lg"
+      className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 shadow-lg shadow-emerald-500/30"
+    >
+      Explore Services
+    </Button>
+  </Link>
+
+  <Link href="/contact">
+    <Button
+      size="lg"
+      // variant="outline"
+      className="border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white font-semibold px-8 backdrop-blur-sm shadow-lg"
+    >
+      Get in Touch
+    </Button>
+  </Link>
           </div>
 
           <p className="text-slate-300/90 mt-12 text-sm">
