@@ -167,14 +167,14 @@ export default function Home() {
             <ScrollReveal direction="left" distance={50}>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Proven <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Results</span>
+                  Why Industries Trust  <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Envirozone</span>
                 </h2>
                 <div className="space-y-4 mb-8">
                   {[
-                    'Average 280% ROI within 18 months',
-                    '98% client satisfaction rating',
-                    'Avg. 35% operational cost reduction',
-                    '100% regulatory compliance rate'
+                    '12+ Years of Industry Experience',
+                    'CPCB & SPCB Compliance Solutions',
+                    'End-to-End Environmental Services',
+                    'Expert Installation, AMC & Technical Support'
                   ].map((result, i) => (
                     <ScrollReveal key={i} direction="right" delay={i * 0.1}>
                       <div className="flex items-center gap-3">
@@ -201,21 +201,21 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="down" distance={50} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Cutting-Edge <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Technology</span>
+              Advanced Environmental Solutions <span className="bg-linear-to-b from-emerald-400 to-teal-400 bg-clip-text text-transparent">Technology</span>
             </h2>
             <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-              Built with the latest in AI, IoT, and cloud infrastructure
+              Delivering innovative technologies for air, water, and waste management with CPCB/SPCB compliance.
             </p>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'AI & Machine Learning', desc: 'Predictive analytics and intelligent optimization' },
-              { title: 'IoT Integration', desc: 'Connected sensors and real-time data collection' },
-              { title: 'Cloud Platform', desc: 'Scalable, secure, and always available' },
-              { title: '24/7 Monitoring', desc: 'Round-the-clock system oversight and alerts' },
-              { title: 'Mobile App', desc: 'Manage systems from anywhere, anytime' },
-              { title: 'API Access', desc: 'Integrate with your existing systems easily' }
+              { title: 'Environmental Monitoring Systems', desc: 'CEMS ,OCEMS ,AAQMS ,Continuous data monitoring' },
+              { title: 'Air Pollution Control', desc: 'Bag Filters , Wet Scrubbers , Cyclone Separators , APCD Solutions' },
+              { title: 'Wastewater Management', desc: 'ETP & STP Solutions ,Water Quality Monitoring ,Calibration & AMC ,Compliance Support' },
+              { title: 'Solid Waste Management', desc: 'Waste Processing Solutions ,Segregation Systems ,Recycling Support ' },
+              { title: 'Anti Smog Gun', desc: 'Control dust pollution with high-pressure mist technology for construction sites, mining, industries, and urban areas.' },
+              { title: 'Compliance & Consultancy', desc: 'CPCB/SPCB Compliance ,Data Connectivity ,Environmental Audits ,Technical Support' }
             ].map((tech, index) => (
               <ScrollReveal key={index} direction="up" delay={index * 0.08}>
                 <HoverScale>
@@ -235,12 +235,12 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal direction="down" distance={50}>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Ready to Transform Your Environmental Operations?
+              Need an Environmental Compliance Solution?
             </h2>
           </ScrollReveal>
           <ScrollReveal direction="down" distance={50} delay={0.2}>
             <p className="text-emerald-900 text-lg mb-8">
-              Get a free consultation with our environmental experts today
+              From Environmental Monitoring Systems to Air Pollution Control, Wastewater Treatment, Solid Waste Management, and Anti Smog Guns—we help industries achieve CPCB/SPCB compliance with reliable turnkey solutions.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" distance={30} delay={0.3} className="flex gap-4 justify-center flex-wrap">
