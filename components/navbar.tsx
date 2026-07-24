@@ -26,16 +26,24 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-12  h-12   flex items-center justify-center">
+            <div className="w-22  h-22   flex items-center justify-center">
               <Image
                 src="/icon.jpg"
                 alt="Logo"
-                width={50}
-                height={50}
+                width={200}
+                height={200}
                 className="object-fill"
               />
             </div>
-            <span className="text-xl font-bold text-slate-900">Envirozone Instruments and Equipments</span>
+            <h1 className="font-['Poppins'] leading-none">
+  <span className="block text-2xl md:text-3xl font-extrabold text-[#8BC34A]">
+    Envirozone Instruments
+  </span>
+
+  <span className="block mt-2 text-3xl md:text-2xl font-semibold text-black">
+    And Equipments
+  </span>
+</h1>
           </Link>
 
           {/* Desktop Menu */}
