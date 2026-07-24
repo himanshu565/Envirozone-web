@@ -1,79 +1,42 @@
 'use client'
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const videos = [
-  "/Chimney_smoke2.mp4",
-  // "/Factory.mp4",
-];
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
-const [currentVideo, setCurrentVideo] = useState(0);
-const [isVisible, setIsVisible] = useState(true);
-
-useEffect(() => {
-  const video = videoRef.current;
-  if (!video) return;
-
-  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (mq.matches) {
-    video.pause();
-    return;
-  }
-
-  const handleEnded = () => {
-    setIsVisible(false);
-
-    setTimeout(() => {
-      const nextIndex = (currentVideo + 1) % videos.length;
-
-      video.src = videos[nextIndex];
-      video.load();
-
-      video.oncanplay = () => {
-        video.play().catch(console.error);
-        setCurrentVideo(nextIndex);
-        setIsVisible(true);
-      };
-    }, 500); // Fade-out duration
-  };
-
-  video.addEventListener("ended", handleEnded);
-
-  video.play().catch(console.error);
-
-  return () => {
-    video.removeEventListener("ended", handleEnded);
-  };
-}, [currentVideo]);
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const mq = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mq && mq.matches && videoRef.current) {
+      try {
+        videoRef.current.pause()
+        videoRef.current.removeAttribute('autoplay')
+      } catch (e) {}
+    }
+  }, [])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-none">
       <div className="absolute inset-0">
-<div className="absolute inset-0">
+  <video
+    className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    
+  >
+    <source src="/Chimney_smoke2.mp4" type="video/mp4" />
+  </video>
 
-  {/* Video 1 */}
-<video
-  ref={videoRef}
-  autoPlay
-  muted
-  playsInline
-  preload="auto"
-  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-    isVisible ? "opacity-100" : "opacity-0"
-  }`}
->
-  <source src={videos[currentVideo]} type="video/mp4" />
-</video>
+  {/* Dark Overlay */}
+  {/* <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-slate-950/75 via-slate-900/55 to-slate-950/80" /> */}
 
+  {/* Green Glow Overlay */}
   <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
-</div>
-
- 
-
-
 </div>
 
       <div className=" inset-0 flex items-center justify-center relative z-10 text-center">
