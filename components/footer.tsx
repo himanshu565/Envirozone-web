@@ -34,30 +34,30 @@ export function Footer() {
             </p>
           </div>
           <div className="trusted-marquee group overflow-hidden rounded-3xl bg-white/80 border border-emerald-100 shadow-sm">
-            <div className="trusted-marquee-track flex items-center gap-8 py-6 px-4 md:px-6">
-              {clientLogos.map((logo, index) => (
-                <div key={`logo-${index}`} className="trusted-logo-item flex min-w-[120px] items-center justify-center px-2 transition-all duration-300">
-                  <Image
-                    src={`/logo/${logo}`}
-                    alt={`Client logo ${index + 1}`}
-                    width={140}
-                    height={90}
-                    className="h-12 md:h-16 w-auto object-contain filter grayscale transition-all duration-300"
-                  />
-                </div>
-              ))}
-              {clientLogos.map((logo, index) => (
-                <div key={`logo-dup-${index}`} className="trusted-logo-item flex min-w-[120px] items-center justify-center px-2 transition-all duration-300">
-                  <Image
-                    src={`/logo/${logo}`}
-                    alt={`Client logo duplicate ${index + 1}`}
-                    width={140}
-                    height={90}
-                    className="h-12 md:h-16 w-auto object-contain filter grayscale transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </div>
+ <div className="trusted-marquee-track flex items-center gap-8 py-2 px-4 md:px-6">
+  {clientLogos.map((logo, index) => (
+    <div key={`logo-${index}`} className="trusted-logo-item flex min-w-40 items-center justify-center px-2 transition-all duration-300">
+      <Image
+        src={`/logo/${logo}`}
+        alt={`Client logo ${index + 1}`}
+        width={180}
+        height={150}
+        className="h-24 md:h-28 w-auto object-contain filter grayscale transition-all duration-300"
+      />
+    </div>
+  ))}
+  {clientLogos.map((logo, index) => (
+    <div key={`logo-dup-${index}`} className="trusted-logo-item flex min-w-40 items-center justify-center px-2 transition-all duration-300">
+      <Image
+        src={`/logo/${logo}`}
+        alt={`Client logo duplicate ${index + 1}`}
+        width={180}
+        height={150}
+        className="h-24 md:h-28 w-auto object-contain filter grayscale transition-all duration-300"
+      />
+    </div>
+  ))}
+</div>
           </div>
         </div>
       </section>
