@@ -125,11 +125,11 @@ export default function ContactPage() {
                   </h3>
 
                   <p className="text-slate-600">
-                    sales@envirozone.in
+                    sales@eieindia.co.in
                   </p>
 
                   <p className="text-slate-600">
-                    support@envirozone.in
+                    support@eieindia.co.in
                   </p>
                 </div>
               </div>
@@ -145,11 +145,11 @@ export default function ContactPage() {
                   </h3>
 
                   <p className="text-slate-600 leading-7">
-                    Envirozone Instruments and Equipment Pvt. Ltd.
+                    Envirozone Instruments and Equipments 
                     <br />
-                    New Delhi,
+                     Registered Address: BA-11 Shalimar bagh Delhi 110088,
                     <br />
-                    India
+                    Office Address: Plot No. 58-59, Badli Extension, New Delhi-110042
                   </p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                   </p>
 
                   <p className="text-slate-600">
-                    9:00 AM – 6:30 PM
+                    10:00 AM – 6:30 PM
                   </p>
                 </div>
               </div>
