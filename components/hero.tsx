@@ -31,12 +31,12 @@ export function Hero() {
     const mq =
       window.matchMedia &&
       window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mq && mq.matches && videoRef.current) {
-      try {
-        videoRef.current.pause();
-        videoRef.current.removeAttribute("autoplay");
-      } catch (e) {}
-    }
+    // if (mq && mq.matches && videoRef.current) {
+    //   try {
+    //     videoRef.current.pause();
+    //     videoRef.current.removeAttribute("autoplay");
+    //   } catch (e) {}
+    // }
   }, []);
 
   return (
@@ -50,6 +50,7 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
+          
         >
           <source src="/BOD.mp4" type="video/mp4" />
         </video>
