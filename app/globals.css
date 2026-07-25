@@ -194,3 +194,33 @@
     opacity: 0;
   }
 }
+@layer utilities {
+  .trusted-marquee-track {
+    animation: trusted-marquee 32s linear infinite;
+    will-change: transform;
+  }
+
+  .trusted-marquee:hover .trusted-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .trusted-logo-item img {
+    filter: grayscale(80%) opacity(0.9);
+    transition: transform 350ms ease, filter 350ms ease, opacity 350ms ease;
+  }
+
+  .trusted-logo-item:hover img {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes trusted-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}

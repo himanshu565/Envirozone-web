@@ -20,7 +20,7 @@ export const metadata = {
 const features = [
   {
     icon: Zap,
-    title: '12+ Years of Experience',
+    title: '30+ Years of Experience',
     description: 'Delivering reliable environmental monitoring, water & wastewater treatment, and pollution control solutions with proven expertise.'
   },
   {
@@ -41,8 +41,8 @@ const features = [
 ]
 
 const stats = [
-  { label: 'Years Experience', value: 12 },
-  { label: 'Projects Completed', value: 50, suffix: '+' },
+  { label: 'Years Experience', value: 30,suffix: '+' },
+  { label: 'Projects Completed', value: 100, suffix: '+' },
   { label: 'Enterprise Clients', value: 100, suffix: '+' },
   { label: 'Satisfaction Rate', value: 98, suffix: '%' }
 ]
@@ -171,7 +171,7 @@ export default function Home() {
                 </h2>
                 <div className="space-y-4 mb-8">
                   {[
-                    '12+ Years of Industry Experience',
+                    '30+ Years of Industry Experience',
                     'CPCB & SPCB Compliance Solutions',
                     'End-to-End Environmental Services',
                     'Expert Installation, AMC & Technical Support'
