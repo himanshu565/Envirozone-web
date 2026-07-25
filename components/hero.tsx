@@ -97,7 +97,7 @@ export function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/solutions">
+            <Link href="/services">
               <Button
                 size="lg"
                 className="bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-8 shadow-lg shadow-emerald-500/30"
@@ -106,6 +106,7 @@ export function Hero() {
                 Explore Services
               </Button>
             </Link>
+            <Link href="/contact">
             <Button
               size="lg"
               variant="outline"
@@ -113,6 +114,7 @@ export function Hero() {
             >
               Get in Touch
             </Button>
+            </Link>
           </div>
 
           <p className="text-slate-300/90 mt-12 text-sm">
