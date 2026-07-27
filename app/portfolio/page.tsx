@@ -8,76 +8,53 @@ import { Award, TrendingUp, Zap } from 'lucide-react'
 const caseStudies = [
   {
     id: 1,
-    title: 'Steel Manufacturing Plant',
-    location: 'Midwest Industrial Complex',
+    title: 'Construction Equipment Manufacturing',
+    location: 'JCB India',
     category: 'Industrial',
-    challenge: 'Excessive air emissions and lack of real-time monitoring compliance',
-    solution: 'Implemented AirPure Monitor Pro system across 12 emission points',
-    results: ['95% emissions reduction', 'Zero compliance violations', '$420K annual savings'],
+    challenge: 'The manufacturing facility required a reliable environmental monitoring solution to maintain regulatory compliance, ensure accurate emissions monitoring, and enable real-time environmental data reporting.',
+    solution: 'Envirozone Instruments & Equipments supplied and commissioned an integrated environmental monitoring system, including installation, calibration, data connectivity, and ongoing technical support.',
+    results: ['Continuous 24×7 Environmental Monitoring', 'Real-Time Data Acquisition', 'Reliable CPCB/SPCB Compliance Support','Professional Installation & AMC Services'],
     testimonial: 'The system paid for itself in the first year. Outstanding support from the team.',
     author: 'Manufacturing Director',
     metrics: { emissions: -95, compliance: 100, roi: 340 }
   },
   {
     id: 2,
-    title: 'Municipal Water Treatment Facility',
-    location: 'Metropolitan Area',
-    category: 'Municipal',
-    challenge: 'Inefficient water treatment and rising operational costs',
-    solution: 'Deployed AquaPure Treatment with automated optimization',
-    results: ['42% cost reduction', 'Improved water quality 99.2%', 'Automated operations'],
+    title: 'Food & Beverage Processing',
+    location: 'Delhi',
+    category: 'Mother Dairy',
+    challenge: 'The facility required continuous monitoring of wastewater parameters to comply with environmental regulations while ensuring efficient treatment plant operation.',
+    solution: 'Envirozone Instruments & Equipments implemented an Online Continuous Effluent Monitoring System (OCEMS) with sensor integration, real-time dashboard, CPCB connectivity, calibration, and annual maintenance support.',
+    results: ['Real-Time Water Quality Monitoring', 'Continuous Compliance Monitoring', 'Automated Data Reporting'],
     testimonial: 'We serve 2M people better while spending significantly less. This is game-changing.',
     author: 'Water Department Manager',
     metrics: { costs: -42, quality: 99.2, automation: 98 }
   },
   {
     id: 3,
-    title: 'Large Commercial Campus',
-    location: 'Downtown Business District',
-    category: 'Commercial',
-    challenge: 'Poor indoor air quality affecting employee productivity',
-    solution: 'Integrated air monitoring and smart HVAC control system',
-    results: ['28% energy savings', 'Air quality rating A+', 'Employee satisfaction +45%'],
+    title: 'Healthcare & Hospitals',
+    location: 'Fortis Hospital',
+    category: 'Hospital',
+    challenge: 'Fortis Hospital required a reliable environmental monitoring solution to ensure continuous compliance with environmental regulations, monitor wastewater discharge parameters, and maintain accurate reporting for regulatory authorities.',
+    solution: 'Envirozone Instruments & Equipments provided a comprehensive environmental monitoring solution, including installation, commissioning, calibration, and integration of online monitoring systems with real-time data acquisition and compliance support.',
+    results: ['24×7 Continuous Environmental Monitoring', 'Real-Time Data Collection & Reporting', 'Reliable CPCB/SPCB Compliance Support'],
     testimonial: 'Our employees breathe better and we cut energy costs. Perfect solution.',
     author: 'Facilities Manager',
     metrics: { energy: -28, satisfaction: 45, airQuality: 95 }
   },
   {
     id: 4,
-    title: 'Agricultural Irrigation Network',
-    location: 'California Valley',
-    category: 'Agriculture',
-    challenge: 'Water waste and suboptimal crop yields from poor irrigation',
-    solution: 'Deployed EcoFlow Analyzer with AI-powered irrigation optimization',
-    results: ['35% water savings', 'Crop yield +22%', 'Automated watering'],
+    title: ' Manufacturing',
+    location: 'British Paints',
+    category: 'Paints & Coatings Manufacturing',
+    challenge: 'The manufacturing facility required a reliable environmental monitoring system to ensure compliance with CPCB/SPCB regulations, monitor emissions and effluent quality, and automate environmental data reporting.',
+    solution: 'Envirozone Instruments & Equipments supplied and commissioned a complete environmental monitoring solution, including real-time monitoring, data acquisition, calibration, and compliance support.',
+    results: ['24×7 Continuous Environmental Monitoring', 'Real-Time Environmental Data Reporting', 'CPCB/SPCB Compliance Support'],
     testimonial: 'We grow more with less water. The ROI exceeded expectations.',
     author: 'Farm Operations Manager',
     metrics: { water: -35, yield: 22, efficiency: 89 }
   },
-  {
-    id: 5,
-    title: 'Regional Hospital Network',
-    location: 'Healthcare Complex',
-    category: 'Healthcare',
-    challenge: 'Meeting strict air quality standards across 8 buildings',
-    solution: 'Comprehensive air monitoring and centralized management system',
-    results: ['100% compliance rate', 'Zero incidents', 'Cost optimization 18%'],
-    testimonial: 'Perfect compliance with all health regulations. Outstanding reliability.',
-    author: 'Hospital Director',
-    metrics: { compliance: 100, incidents: 0, costs: -18 }
-  },
-  {
-    id: 6,
-    title: 'Waste Processing Facility',
-    location: 'Regional Waste Management',
-    category: 'Waste Management',
-    challenge: 'Low recycling rates and high operational costs',
-    solution: 'Implemented EcoWaste Processor with AI sorting system',
-    results: ['52% recycling rate increase', '$2.1M annual cost savings', '85% waste reduction'],
-    testimonial: 'The AI sorting system is incredible. We turned waste management into profit.',
-    author: 'Facility Director',
-    metrics: { recycling: 52, savings: 2.1, waste: -85 }
-  }
+  
 ]
 
 export default function PortfolioPage() {
@@ -183,10 +160,7 @@ export default function PortfolioPage() {
                     </div>
 
                     {/* Testimonial */}
-                    <div className="px-8 py-6 bg-slate-50 border-t border-emerald-100">
-                      <p className="text-slate-600 italic mb-3">"{study.testimonial}"</p>
-                      <p className="text-sm font-semibold text-primary">— {study.author}</p>
-                    </div>
+                  
                   </div>
                 </HoverScale>
               </ScrollReveal>

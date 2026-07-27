@@ -22,7 +22,7 @@ const services = [
       'Calibration & AMC Services',
       'Data Logger & Cloud Monitoring'
     ],
-    stats: { projects: 50, locations: 10, satisfaction: 98 }
+    stats: { projects: 100, locations: 100, satisfaction: 98 }
   },
   {
     id: 'water-treatment',
@@ -39,7 +39,7 @@ const services = [
       'Operation & Maintenance Support',
       'Design, Installation, Commissioning & AMC Services'
     ],
-    stats: { projects: 50, locations: 800, satisfaction: 99 }
+    stats: { projects: 150, locations: 150, satisfaction: 99 }
   },
   {
     id: 'waste-management',
@@ -55,7 +55,7 @@ const services = [
       'Environmental Compliance & Sustainable Waste Solutions',
       'Organic Waste Composters (OWC)',
     ],
-    stats: { projects: 30, locations: 50, satisfaction: 97 }
+    stats: { projects: 19, locations: 19, satisfaction: 97 }
   }
 ]
 

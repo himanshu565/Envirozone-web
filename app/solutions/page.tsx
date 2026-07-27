@@ -101,7 +101,7 @@ export default function SolutionsPage() {
           </ScrollReveal>
           <ScrollReveal direction="down" distance={50} delay={0.2}>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Tailored environmental systems designed for your industry's unique challenges and opportunities
+              Smart environmental technologies designed to meet your industry's compliance, monitoring, and sustainability goals.
             </p>
           </ScrollReveal>
         </div>

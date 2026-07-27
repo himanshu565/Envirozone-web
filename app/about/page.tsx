@@ -10,30 +10,30 @@ const values = [
   {
     icon: Zap,
     title: 'Innovation',
-    description: 'Pioneering cutting-edge environmental technologies'
+    description: 'Developing advanced environmental monitoring and automation solutions that drive smarter industrial compliance.'
   },
   {
     icon: Globe,
     title: 'Sustainability',
-    description: 'Committed to a cleaner, healthier planet'
+    description: 'Helping industries reduce environmental impact through reliable monitoring and sustainable technologies.'
   },
   {
     icon: Users,
     title: 'Partnership',
-    description: 'Working together for shared environmental goals'
+    description: 'Building long-term relationships through expert support, customised solutions, and dependable service.'
   },
   {
     icon: Award,
     title: 'Excellence',
-    description: 'Delivering superior quality and service'
+    description: 'Delivering precision-engineered instruments with uncompromising quality, accuracy, and performance.'
   }
 ]
 
 const team = [
   { name: 'Taken Chhabra', role: 'Chief Executive Officer', bio: '30+ years in environmental engineering' },
-  { name: 'Yash Chhabra', role: 'Partner', bio: 'AI & IoT specialist with 20+ years experience' },
+  { name: 'Yash Chhabra', role: 'Partner', bio: 'AI & IoT specialist with 10+ years experience' },
   { name: 'Sonu Tandon', role: 'Vice president', bio: 'Led 200+ environmental projects globally' },
-  { name: 'Tushar chhabra', role: 'partner', bio: '25 years building environmental solutions' }
+  { name: 'Tushar chhabra', role: 'partner', bio: '₹5 years building environmental solutions' }
 ]
 
 export default function AboutPage() {
@@ -63,9 +63,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { label: 'Years of Excellence', value: 15 },
+              { label: 'Years of Excellence', value: 30 },
               { label: 'Projects Completed', value: 100 },  
-              { label: 'Enterprise Clients', value: 50 },
+              { label: 'Enterprise Clients', value: 100 },
               { label: 'Global Locations', value: 10 }
             ].map((stat, i) => (
               <ScrollReveal key={i} direction="up" delay={i * 0.1}>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <ScrollReveal direction="right" distance={50}>
               <div className="bg-linear-to-br from-emerald-50 to-teal-50 rounded-xl p-8 border border-emerald-100 h-96 flex items-center justify-center shadow-sm">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-emerald-400 mb-4">12</div>
+                  <div className="text-6xl font-bold text-emerald-400 mb-4">30</div>
                   <p className="text-xl text-slate-600">Years of Environmental Excellence</p>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  To provide innovative environmental solutions that enable organizations to achieve operational excellence, regulatory compliance, and sustainable growth while protecting the planet for future generations.
+                  To deliver innovative environmental monitoring and compliance solutions that help industries monitor emissions, manage water quality, and meet environmental regulations with confidence.
                 </p>
               </div>
             </ScrollReveal>
@@ -183,7 +183,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
                 <p className="text-slate-600 leading-relaxed">
-                  To be the global leader in environmental technology, recognized for innovation, reliability, and positive environmental impact. We envision a world where organizations of all sizes have access to world-class environmental solutions.
+                  To be a global leader in environmental technology, empowering industries with smart, reliable, and sustainable solutions for a cleaner tomorrow.
                 </p>
               </div>
             </ScrollReveal>
