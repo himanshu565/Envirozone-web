@@ -9,53 +9,51 @@ import Link from 'next/link'
 const solutions = [
   {
     title: 'Industrial Manufacturing',
-    description: 'Comprehensive monitoring for manufacturing facilities with multiple emission points and complex processes.',
-    challenges: ['Emissions compliance', 'Waste stream management', 'Energy efficiency', 'Real-time monitoring'],
+    description: 'Real-time environmental monitoring and pollution control solutions for manufacturing plants to ensure CPCB/SPCB compliance.',
+    challenges: ['CEMS', 'OCEMS', 'AAQMS', 'Stack Monitoring', 'DG Retrofit Emission Control', 'Water Quality Monitoring'],
     benefits: ['Reduce compliance violations', '25-35% cost savings', 'Automated reporting', 'Predictive maintenance'],
-    roi: '340%',
     implementation: '8-12 weeks',
     icon: 'bg-blue-500/20 border-blue-500/50'
   },
   {
-    title: 'Municipal Wastewater',
-    description: 'Advanced treatment and monitoring systems for municipal water and wastewater facilities.',
-    challenges: ['Water quality standards', 'Treatment optimization', 'Regulatory compliance', 'Energy costs'],
+    title: 'Wastewater Management',
+    description: 'Complete monitoring and treatment solutions for industrial and municipal wastewater.',
+    challenges: ['Online Water Analyzer', 'Flow Meter', 'pH / COD / BOD / TSS Sensors', 'ETP & STP Automation','Data Connectivity to CPCB'],
     benefits: ['100% compliance', '30% energy reduction', 'Automated processes', 'Better water quality'],
-    roi: '280%',
     implementation: '10-14 weeks',
     icon: 'bg-cyan-500/20 border-cyan-500/50'
   },
   {
-    title: 'Commercial Buildings',
-    description: 'Indoor air quality and environmental monitoring for office complexes and commercial spaces.',
-    challenges: ['Air quality management', 'Occupant health', 'Energy efficiency', 'Maintenance costs'],
+    title: 'Air Pollution Control',
+    description: 'Advanced emission control technologies to reduce particulate matter and gaseous pollutants.',
+    challenges: ['Bag Filter', 'Wet Scrubber', 'Cyclone Separator', 'Anti Smog Gun','Dust Suppression System','APCD Consultancy'],
     benefits: ['Healthier spaces', '20% energy savings', 'Smart controls', 'Occupant satisfaction'],
     roi: '215%',
     implementation: '4-6 weeks',
     icon: 'bg-emerald-500/20 border-emerald-500/50'
   },
   {
-    title: 'Agricultural Operations',
-    description: 'Water treatment and quality monitoring for agricultural and irrigation systems.',
-    challenges: ['Water quality', 'Irrigation optimization', 'Soil monitoring', 'Yield optimization'],
+    title: 'Solid Waste Management',
+    description: 'End-to-end solutions for efficient collection, segregation, treatment, recycling, and disposal of industrial and municipal solid waste.',
+    challenges: ['Waste Segregation', 'Composting Systems', 'Organic Waste Composting'],
     benefits: ['Better crops', 'Water conservation', 'Automated irrigation', 'Reduced waste'],
     roi: '380%',
     implementation: '6-10 weeks',
     icon: 'bg-green-500/20 border-green-500/50'
   },
   {
-    title: 'Healthcare Facilities',
-    description: 'Environmental monitoring for hospitals with specialized air and water quality requirements.',
-    challenges: ['Sterile environment', 'Compliance standards', 'Patient safety', 'Equipment reliability'],
+    title: 'Annual Maintenance & Calibration',
+    description: 'Keep your monitoring systems accurate and compliant with preventive maintenance, calibration, and technical support.',
+    challenges: ['Preventive Maintenance', 'Sensor Calibration', 'Remote Monitoring', '24×7 Technical Support'],
     benefits: ['Safe environment', 'Full compliance', 'Reduced downtime', 'Lower incidents'],
     roi: '295%',
     implementation: '8-12 weeks',
     icon: 'bg-red-500/20 border-red-500/50'
   },
   {
-    title: 'Data Centers',
-    description: 'Environmental control and monitoring for server farms and data centers.',
-    challenges: ['Temperature control', 'Humidity management', 'Energy efficiency', 'Equipment protection'],
+    title: 'Anti Smog Gun',
+    description: 'High-pressure dust suppression systems for construction sites, mining, industrial plants, and demolition projects to effectively control airborne dust.',
+    challenges: ['Dust Suppression', 'Long Spray Range', 'Remote Operation', 'Water Efficient Technology'],
     benefits: ['Better uptime', '35% less energy', 'Equipment longevity', 'Cost reduction'],
     icon: 'bg-purple-500/20 border-purple-500/50'
   }
@@ -63,7 +61,7 @@ const solutions = [
 
 const industries = [
   {
-    name: 'Oil & Gas',
+    name: 'Textile',
     description: 'Emissions monitoring, flare optimization, waste management'
   },
   {
@@ -124,21 +122,13 @@ export default function SolutionsPage() {
                     <div className="mb-6">
                       <p className="text-xs font-semibold text-slate-500 uppercase mb-3">Key Challenges</p>
                       <div className="flex flex-wrap gap-2">
-                        {solution.challenges.slice(0, 2).map((challenge) => (
+                        {solution.challenges.slice(0, 6).map((challenge) => (
                           <span key={challenge} className="text-xs bg-emerald-50 text-slate-700 px-2.5 py-1 rounded-full border border-emerald-100">
                             {challenge}
                           </span>
                         ))}
                       </div>
                     </div>
-
-                    {/* Stats */}
-                    {solution.roi && (
-                      <div className="mb-6 p-4 bg-emerald-50 border border-emerald-100 rounded-lg">
-                        <p className="text-xs text-slate-500 mb-1">Average ROI</p>
-                        <p className="text-2xl font-bold text-primary">{solution.roi}</p>
-                      </div>
-                    )}
 
                     <button className="w-full px-4 py-2 rounded-lg bg-primary/10 border border-primary/20 text-primary font-semibold hover:bg-primary/15 transition-colors">
                       Learn More
