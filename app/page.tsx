@@ -11,6 +11,7 @@ import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 import { ArrowRight, Zap, Shield, Gauge, Leaf } from 'lucide-react'
 import Link from 'next/link'
+import WelcomePopup from '@/components/welcomePopup'
 
 export const metadata = {
   title: 'Envirozone - 30 Years of Environmental Excellence',
@@ -50,8 +51,10 @@ const stats = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      <WelcomePopup />
       <Navbar />
       <Hero />
+      
 
       {/* Features Section */}
       <section className="py-20 px-4 md:px-6 relative bg-slate-50">

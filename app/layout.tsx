@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import WhatsAppButton from "@/components/WhatsAppButton";
 import './globals.css'
 
+
 export const metadata: Metadata = {
   title: 'Envirozone - Environmental Monitoring & Pollution Abatement',
   description: 'Environmental Monitoring, Wastewater Management, and Solid Waste Management Solutions. Reliable instruments for a sustainable future.',
@@ -22,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-[#fbf7ef] light">
       <body className="antialiased bg-[#fbf7ef] text-slate-900">
+        
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        
         <WhatsAppButton />
       </body>
     </html>

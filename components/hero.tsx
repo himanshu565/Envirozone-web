@@ -85,7 +85,7 @@ export function Hero() {
           <div className="mb-6">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance drop-shadow-[0_6px_24px_rgba(0,0,0,0.45)]">
               30+ Years of Environmental
-              <span className="block bg-linear-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="block bg-linear-to-r from-emerald-500 via-teal-300 to-cyan-700 bg-clip-text text-transparent">
                 Excellence
               </span>
             </h1>
