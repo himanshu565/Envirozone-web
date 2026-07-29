@@ -144,19 +144,7 @@ export default function PortfolioPage() {
                       </div>
 
                       {/* Right - Metrics */}
-                      <div className="md:col-span-1 p-8 bg-gradient-to-br from-emerald-50 to-teal-50 flex flex-col justify-center">
-                        <div className="space-y-6">
-                          {Object.entries(study.metrics).map(([key, value]) => (
-                            <div key={key}>
-                              <p className="text-xs text-slate-500 uppercase mb-1 font-semibold">{key}</p>
-                              <p className="text-3xl font-bold text-primary">
-                                {value > 0 ? '+' : ''}{value}{typeof value === 'number' && Math.abs(value) < 10 ? '.' : ''}
-                                {typeof value === 'number' && value < 100 && value !== Math.floor(value) ? '' : value >= 100 ? '%' : '%'}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                
                     </div>
 
                     {/* Testimonial */}
