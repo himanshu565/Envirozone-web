@@ -7,57 +7,55 @@ import { X } from "lucide-react";
 export default function WelcomePopup() {
   const [open, setOpen] = useState(false);
 
-useEffect(() => {
-  let closeTimer: NodeJS.Timeout;
+  useEffect(() => {
+    let closeTimer: NodeJS.Timeout;
 
-  const openTimer = setTimeout(() => {
-    setOpen(true);
+    const openTimer = setTimeout(() => {
+      setOpen(true);
 
-    closeTimer = setTimeout(() => {
-      setOpen(false);
-    }, 3000);
-  }, 1000);
+      closeTimer = setTimeout(() => {
+        setOpen(false);
+      }, 3000);
+    }, 1000);
 
-  return () => {
-    clearTimeout(openTimer);
-    if (closeTimer) clearTimeout(closeTimer);
-  };
-}, []);
+    return () => {
+      clearTimeout(openTimer);
+      if (closeTimer) clearTimeout(closeTimer);
+    };
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
       {open && (
         <motion.div
           className="fixed inset-0 z-9999 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4"
-            initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  transition={{
-    duration: 0.2,
-    ease: "easeOut",
-  }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            duration: 0.2,
+            ease: "easeOut",
+          }}
         >
           <motion.div
-  initial={{
-    opacity: 0,
-    scale: 0.985,
-  }}
-  animate={{
-    opacity: 1,
-    scale: 1,
-  }}
-  exit={{
-    opacity: 0,
-    scale: 0.99,
-  }}
-  transition={{
-    duration: 0.25,
-    ease: "easeOut",
-  }}
-  className="relative w-full max-w-4xl overflow-hidden rounded-[32px] bg-white shadow-[0_30px_80px_rgba(0,0,0,0.18)]"
->
-  
-
+            initial={{
+              opacity: 0,
+              scale: 0.985,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            exit={{
+              opacity: 0,
+              scale: 0.99,
+            }}
+            transition={{
+              duration: 0.25,
+              ease: "easeOut",
+            }}
+            className="relative w-full max-w-4xl overflow-hidden rounded-[32px] bg-white shadow-[0_16px_40px_rgba(0,0,0,0.15)]]"
+          >
             {/* Top Accent */}
             <div className="h-2 bg-linear-to-r from-teal-400 to-emerald-500" />
 
@@ -79,7 +77,6 @@ useEffect(() => {
               <p className="mt-8 text-lg md:text-xl font-semibold uppercase tracking-[0.35em] text-teal-700">
                 TO ENVIROZONE INSTRUMENTS &amp; EQUIPMENTS
               </p>
-
 
               <motion.button
                 whileHover={{
