@@ -1,12 +1,19 @@
 import nodemailer from "nodemailer";
+import type { Options } from "nodemailer/lib/smtp-transport";
+import dns from "node:dns";
 
-export const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: true,
+dns.setDefaultResultOrder("ipv4first");
 
-    auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-    },
-});
+const smtpOptions: Options = {
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: false,
+  requireTLS: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+};
+
+export const transporter = nodemailer.createTransport(smtpOptions);
+

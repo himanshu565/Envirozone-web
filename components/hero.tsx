@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
@@ -41,43 +41,50 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden  bg-slate-200">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
+        {/* Background video */}
         <video
           ref={videoRef}
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="absolute inset-0 z-10 w-full h-full object-cover pointer-events-none"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
-          
+          preload="metadata"
         >
           <source src="/BOD.mp4" type="video/mp4" />
         </video>
 
-        <div className="water-animation">
-          <div className="parameter bod">BOD</div>
-          <div className="parameter cod">COD</div>
-          <div className="parameter tss">TSS</div>
-          <div className="parameter ph">pH</div>
-          <div className="parameter pm">PM</div>
+        {/* Dark/green overlay */}
+        <div
+          className="absolute inset-0 z-20 pointer-events-none
+      bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]"
+        />
 
-          {bubbles.map((bubble, index) => (
-            <span
-              key={index}
-              className="bubble"
-              style={{
-                left: bubble.left,
-                width: `${bubble.size}px`,
-                height: `${bubble.size}px`,
-                animationDuration: bubble.animationDuration,
-                animationDelay: bubble.animationDelay,
-              }}
-            />
-          ))}
+        {/* Bubbles and parameters */}
+        <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden">
+          <div className="water-animation">
+            <div className="parameter bod">BOD</div>
+            <div className="parameter cod">COD</div>
+            <div className="parameter tss">TSS</div>
+            <div className="parameter ph">pH</div>
+            <div className="parameter pm">PM</div>
+
+            {bubbles.map((bubble, index) => (
+              <span
+                key={index}
+                className="bubble"
+                style={{
+                  left: bubble.left,
+                  width: `${bubble.size}px`,
+                  height: `${bubble.size}px`,
+                  animationDuration: bubble.animationDuration,
+                  animationDelay: bubble.animationDelay,
+                }}
+              />
+            ))}
+          </div>
         </div>
-
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_45%),linear-gradient(180deg,transparent_0%,rgba(15,23,42,0.35)_100%)]" />
       </div>
 
       <div className=" inset-0 flex items-center justify-center relative z-10 text-center">
@@ -108,13 +115,13 @@ export function Hero() {
               </Button>
             </Link>
             <Link href="/contact">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 bg-white/10 text-white hover:bg-white/20 font-semibold px-8 backdrop-blur-sm"
-            >
-              Get in Touch
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white/30 bg-white/10 text-white hover:bg-white/20 font-semibold px-8 backdrop-blur-sm"
+              >
+                Get in Touch
+              </Button>
             </Link>
           </div>
 
