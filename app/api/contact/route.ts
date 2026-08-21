@@ -9,6 +9,8 @@ export async function POST(req: Request) {
       name,
       email,
       company,
+      phone,
+      inquiry,
       message,
     } = body;
 
@@ -28,15 +30,49 @@ export async function POST(req: Request) {
       to: process.env.CONTACT_EMAIL,
       replyTo: email,
       subject: `New Website Inquiry - ${name}`,
+
       html: `
-        <h2>New Website Inquiry</h2>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #222;">
 
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Company:</strong> ${company || "Not provided"}</p>
+          <h2 style="color: #059669;">
+            New Website Inquiry
+          </h2>
 
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+          <hr />
+
+          <p>
+            <strong>Name:</strong> ${name}
+          </p>
+
+          <p>
+            <strong>Email:</strong> ${email}
+          </p>
+
+          <p>
+            <strong>Phone:</strong> ${phone || "Not provided"}
+          </p>
+
+          <p>
+            <strong>Company:</strong> ${company || "Not provided"}
+          </p>
+
+          <p>
+            <strong>Inquiry Type:</strong> ${inquiry || "Not specified"}
+          </p>
+
+          <h3>Message</h3>
+
+          <p>
+            ${message.replace(/\n/g, "<br />")}
+          </p>
+
+          <hr />
+
+          <p>
+            <strong>Reply to:</strong> ${email}
+          </p>
+
+        </div>
       `,
     });
 
@@ -45,16 +81,37 @@ export async function POST(req: Request) {
       from: `"EIE India" <${process.env.SMTP_USER}>`,
       to: email,
       subject: "Thank you for contacting EIE India",
+
       html: `
-        <h2>Hello ${name},</h2>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
 
-        <p>Thank you for contacting EIE India.</p>
+          <h2>Hello ${name},</h2>
 
-        <p>
-          We have received your inquiry and our team will get back to you shortly.
-        </p>
+          <p>
+            Thank you for contacting EIE India.
+          </p>
 
-        <p>Regards,<br />EIE India Team</p>
+          <p>
+            We have received your inquiry and our team will get back
+            to you shortly.
+          </p>
+
+          <hr />
+
+          <p>
+            <strong>Your Inquiry:</strong>
+          </p>
+
+          <p>
+            ${message.replace(/\n/g, "<br />")}
+          </p>
+
+          <p>
+            Regards,<br />
+            EIE India Team
+          </p>
+
+        </div>
       `,
     });
 
