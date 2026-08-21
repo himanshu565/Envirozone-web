@@ -52,7 +52,7 @@ export function Hero() {
           playsInline
           preload="metadata"
         >
-          <source src="/BOD.mp4" type="video/mp4" />
+          <source src="/BOD.mp4?v=2" type="video/mp4" />
         </video>
 
         {/* Dark/green overlay */}
