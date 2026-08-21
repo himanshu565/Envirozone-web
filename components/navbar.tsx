@@ -28,7 +28,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <div className="w-10  h-10   flex items-center justify-center">
               <Image
-                src="/icon.jpg"
+                src="/icon.png"
                 alt="Logo"
                 width={200}
                 height={200}
