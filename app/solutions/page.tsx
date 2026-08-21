@@ -2,7 +2,6 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { ScrollReveal } from '@/components/animations/scroll-reveal'
 import { HoverScale } from '@/components/animations/hover-scale'
-import { Stagger } from '@/components/animations/stagger'
 import { TrendingUp, Zap, Target, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 
